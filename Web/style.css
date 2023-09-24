@@ -76,4 +76,6 @@ div.separateur{
 
 .img-block{
     display: block;
+    max-height: 499px;
+    object-fit: cover;
 }
