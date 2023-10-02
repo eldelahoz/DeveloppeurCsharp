@@ -79,3 +79,22 @@ div.separateur{
     max-height: 499px;
     object-fit: cover;
 }
+
+div.colonne{
+    width: 50%;
+}
+
+.colonne h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.colonne1{
+    background-color: lightgray;
+    display: inline-block;
+}
+
+div.colonne2{
+    background-color: lightblue;
+    float: right;
+}
