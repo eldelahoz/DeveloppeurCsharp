@@ -19,11 +19,9 @@ h1{
 }
 
 #contenu{
-    margin: 4% 10% 4% 10%;
     background-color: white;
-    padding-top: 0;
-    padding-left: 2%;
-    padding-right: 2%;
+    margin: 40px 8px 40px 8px;
+    padding: 0px 8px 20px 8px;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
     overflow: visible;
 }
@@ -73,17 +71,19 @@ div.separateur{
     width: 100%;
     color: white;
     background-color: #6C829DC0;
-    height: 80px;
+    height: 50px;
 }
 
 .table-info td{
     text-align: center;
     vertical-align: top;
+    font-size: 12px;
 }
 
 .table-info th{
     vertical-align: bottom;
     padding-bottom: 1%;
+    font-size: 14px;
 }
 
 .img-block{
@@ -93,7 +93,7 @@ div.separateur{
 }
 
 div.colonne{
-    width: 45%;
+    width: 100%;
     margin-top: 2%;
 }
 
@@ -122,11 +122,6 @@ div.colonne{
 
 div.colonne1{
     display: inline-block;
-    margin-right: 10%;
-}
-
-div.colonne2{
-    float: right;
 }
 
 table.preparation p.numero{
@@ -157,3 +152,36 @@ table.preparation tr{
     min-height: 100px;
 }
 
+/*Styles pour ordinateur*/
+@media only screen and (min-width: 768px) {
+    #contenu {
+        min-width: 350px;
+        padding-top: 0;
+        padding-left: 2%;
+        padding-right: 2%;
+        margin: 4% 10% 4% 10%;
+    }
+
+    .table-info{
+        height: 80px;
+    }
+    
+    .table-info td{
+        font-size: 14px;
+    }
+    
+    .table-info th{
+        font-size: 16px;
+    }
+
+    div.colonne{
+        width: 45%;
+    }
+    div.colonne1{
+        margin-right: 10%;
+    }
+    
+    div.colonne2{
+        float: right;
+    }
+}
