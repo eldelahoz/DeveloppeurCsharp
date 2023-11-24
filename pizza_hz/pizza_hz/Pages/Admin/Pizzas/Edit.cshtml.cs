@@ -49,6 +49,7 @@ namespace pizza_hz.Pages.Admin.Pizzas
             }
 
             _context.Attach(Pizza).State = EntityState.Modified;
+            _context.Update(Pizza);
 
             try
             {
