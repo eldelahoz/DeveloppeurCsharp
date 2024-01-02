@@ -1,0 +1,28 @@
+﻿@page
+@model pizza_hz.Pages.MenuPizzasModel
+@{
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu des Pizzas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+
+    <h1>Menu des Pizzas</h1>
+
+    <a asp-page="Index">Retour à l'accueil</a>
+
+    <ul>
+        @foreach (var item in Model.Pizza)
+        {
+            <li>@item.nom - @item.prix €</li>
+        }
+    </ul>
+
+</body>
+</html>
