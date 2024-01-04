@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using pizza_hz.Data;
 using pizza_hz.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace pizza_hz.Pages
@@ -20,6 +21,7 @@ namespace pizza_hz.Pages
         public async Task OnGetAsync()
         {
             Pizza = await _dataContext.Pizzas.ToListAsync();
+            Pizza = Pizza.OrderBy(p => p.prix).ToList();
         }
     }
 }

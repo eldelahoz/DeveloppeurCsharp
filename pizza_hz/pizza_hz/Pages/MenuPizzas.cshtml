@@ -13,16 +13,30 @@
 </head>
 <body>
 
-    <h1>Menu des Pizzas</h1>
+    <div class="logo_menu">
+        <a asp-page="Index">
+            <img src="~/images/small_logo.png" />
+       </a>
+    </div>
 
-    <a asp-page="Index">Retour à l'accueil</a>
-
-    <ul>
-        @foreach (var item in Model.Pizza)
-        {
-            <li>@item.nom - @item.prix €</li>
-        }
-    </ul>
+    <div class="les_pizzas">
+        <h1>Les Pizzas</h1>
+    </div>
+       
+    <div class="menu_list">
+    @foreach (var item in Model.Pizza)
+    {
+            <div class="menu_list_item">
+                <span class="menu_list_title">@item.nom</span>
+                <span class="menu_list_prix">@String.Format("{0:0.00}", item.prix) €</span>
+                <span class="menu_list_ingredients">@item.ingredients </span>
+                @if (item.vegetarienne)
+                {
+                    <span class="menu_list_badge">VÉGÉTARIENNE</span>
+                }
+            </div>
+    }
+    </div>
 
 </body>
 </html>
