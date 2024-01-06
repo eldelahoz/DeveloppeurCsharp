@@ -2,7 +2,10 @@
 @model pizza_hz.Pages.Admin.IndexModel
 @{
 }
-
+@if (Model.IsDevelopmentMode)
+{
+    <p>MODE DEVELOPPEMENT</p>
+}
 <h1>Vous devez vous authentifier</h1>
 @if (Model.HasLoggingError)
 {

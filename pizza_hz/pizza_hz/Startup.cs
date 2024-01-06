@@ -31,8 +31,11 @@ namespace pizza_hz
                 options.LoginPath = "/Admin";
             });
 
-            services.AddDbContext<DataContext>(options => 
-                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<DataContext>(options => 
+            //    options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<DataContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddRazorPages();
             services.AddControllers();
